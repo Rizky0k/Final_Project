@@ -14,11 +14,19 @@ li, a {
     font-size: 16px;
     color: black;
     text-decoration: none;
-    padding: 10px;
+    padding: 8px;
+    border-radius: 20px;
     /* border: black solid; */
 }
+li:hover {
+    background-color: #8282e2;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 20px;
+    transition: .2s;
+}
 a:hover {
-    color: #8282e2;
+    color: #fff;
 }
 .logo {
     width: 200px;
@@ -41,7 +49,7 @@ header {
     padding-left: 10%;
 }
 hr {
-    margin-top: 10px;
+    margin-top: 20px;
     border: 1.5px solid 8282e2;
     width: 95%;
 }
@@ -49,10 +57,83 @@ hr {
     display: flex;
     margin: 10px 4%;
 }
+.box_img1 {
+    /* border: solid black; */
+    position: relative;
+}
 .box_img1 img {
     width: 50em;
     height: 30em;
     margin-right: 10px;
+}
+.box_img1 .judul-jumbotron {
+    position: absolute;
+    top: 47vh;
+    left: 7vh;
+    font-size: 38px;
+    color: #fff;
+}
+.box_img1 .text-jumbotron {
+    color: #fff;
+    position: absolute;
+    top: 56vh;
+    left: 7vh;
+    width: 55vh;
+    /* border: solid black; */
+}
+.detail-jumbotron {
+    opacity: 0;
+    transition: .5s;
+}
+.box_img1 > img:hover + .detail-jumbotron{
+    opacity: 1;
+    transition: .2s;
+}
+.box_img2 .content-satu {
+    position: relative;
+}
+.box_img2 .text-jumbotron {
+    color: #fff;
+    position: absolute;
+    top: 20vh;
+    left: 5vh;
+    width: 55vh;
+}
+.box_img2 .judul-jumbotron {
+    color: #fff;
+    position: absolute;
+    top: 15vh;
+    left: 5vh;
+    width: 55vh;
+}
+.box_img2 .content-satu {
+    position: relative;
+}
+.box_img2 .text-jumbotron{
+    color: #fff;
+    position: absolute;
+    top: 20vh;
+    left: 5vh;
+    width: 55vh;
+}
+.box_img2 .judul-jumbotron {
+    color: #fff;
+    position: absolute;
+    top: 15vh;
+    left: 5vh;
+    width: 55vh;
+}
+.detail-jumbotron {
+    opacity: 0;
+    transition: .5s;
+}
+.box_img1 > img:hover + .detail-jumbotron{
+    opacity: 1;
+    transition: .2s;
+}
+.content-satu > img:hover + .detail-jumbotron{
+    opacity: 1;
+    transition: .2s;
 }
 .box_img2 img {
     width: 27.5em;
@@ -228,7 +309,7 @@ hr {
 .futer {
     margin-top: 70px;
     padding: 50px;
-    background-color: rgb(175, 175, 175);
+    background-color: rgb(131, 131, 131);
     height: 100%;
 }
 .isi-futer {
