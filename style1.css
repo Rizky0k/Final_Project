@@ -7,9 +7,9 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: rgb(240, 240, 240); 
+    background: rgb(240, 240, 240);
 }
-li, a {
+.navbar li, a {
     font-weight: 500;
     font-size: 16px;
     color: black;
@@ -18,14 +18,14 @@ li, a {
     border-radius: 20px;
     /* border: black solid; */
 }
-li:hover {
+.navbar li:hover {
     background-color: #8282e2;
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 20px;
     transition: .2s;
 }
-a:hover {
+.navbar a:hover {
     color: #fff;
 }
 .logo {
@@ -53,7 +53,7 @@ hr {
     border: 1.5px solid 8282e2;
     width: 95%;
 }
-.jumbotron {
+#jumbotron {
     display: flex;
     margin: 10px 4%;
 }
@@ -127,7 +127,7 @@ hr {
     opacity: 0;
     transition: .5s;
 }
-.box_img1 > img:hover + .detail-jumbotron{
+#jumbotron:hover + .detail-jumbotron{
     opacity: 1;
     transition: .2s;
 }
@@ -176,6 +176,7 @@ hr {
 .card-image > img {
     display: block;
     width: 100%;
+    transition: .5s all ease-in-out;
 }
 .card-detail {
     padding: 15px;
@@ -184,17 +185,53 @@ hr {
     text-align: justify;
     font-size: 14px;
 }
-.card-detail h4 {
+.card-detail h4{
     font-size: 24px;
+    /* jaga-jaga */
+    display: inline-block;
+    position: relative;
+}
+.card-detail a {
+    padding: 0;
+}
+.card-judul:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #8282e2;
+    transform-origin: bottom right;
+    transition: transform .4s ease-out;
+}
+.card-judul:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 #section2 {
     margin: 10px 4%;
-    margin-top: 50px;
+    margin-top: 60px;
+}
+#section2 h2 {
+    font-size: 32px;
 }
 .box-content {
     display: flex;
-    
+    width: 100%;
+    margin-top: 5px;
+}
+
+.content{
+    display: flex;
+    background: white;
+    width: 55em;
+    height: 34vh;
+}
+.ctn-bawah {
+    margin-top: 30px;
 }
 .content-kanan {
     display: flex;
@@ -202,23 +239,18 @@ hr {
     /* border: solid black; */
     height: 100%;
 }
-.content{
-    display: flex;
-    background: white;
-    width: 55em;
-    height: 34vh;
-    margin-top: 30px;
-}
-
 .content-kotak {
     display: flex;
     flex-direction: column;
     background: white;
     width: 20em;
     height: 100%;
-    margin-top: 30px;
     margin-left: 50px;
     padding-bottom: 20px;
+    
+}
+.ktk-bawah {
+    margin-top: 10px;
 }
 .content-image {
     overflow: hidden;
@@ -239,18 +271,51 @@ hr {
 .content-detail h4 {
     font-size: 24px;
 }
-.content-detail .btn-read {
-    margin-top: 20px;
+.btn-read {
+    margin-top: 12px;
     border-radius: 1.5em;
-    padding: .5em 2em;
+    font-size: 14px;
+    padding: .8em 3em;
     background-color: #8282e2;
     color: #fff;
     cursor: pointer;
     border: none;
+    transition: .25s all ease-in-out;
+}
+.btn-read:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-read:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 .content-image > img {
     display: block;
     width: 100%;
+}
+.content-kanan a {
+    padding: 0;
+}
+.content-judul {
+    display: inline-block;
+    position: relative;
+}
+.content-judul:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #8282e2;
+    transform-origin: bottom right;
+    transition: transform .4s ease-out;
+}
+.content-judul:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .kotak-coba {
@@ -309,7 +374,7 @@ hr {
 .futer {
     margin-top: 70px;
     padding: 50px;
-    background-color: rgb(131, 131, 131);
+    background-color: rgb(65, 65, 65);
     height: 100%;
 }
 .isi-futer {
@@ -326,48 +391,3 @@ hr {
     color: #fff;
     list-style: none;
 }
-
-
-/* jaga jaga */
-/* .box-content {
-    display: flex;
-    flex-direction: column;
-
-}
-.content{
-    display: flex;
-    background: white;
-    width: 55em;
-    height: 100%;
-    margin-top: 30px;
-}
-.content-image {
-    overflow: hidden;
-}
-.content-detail {
-    margin-top: .5em;
-    margin-left: 1em;
-    margin-right: 2em;
-}
-.content-detail .isi {
-    font-size: 12px;
-}
-.content-detail p {
-    text-align: justify;
-    font-size: 10px;
-    padding: 5px;
-}
-.content-detail h4 {
-    font-size: 24px;
-}
-.content-detail .btn-read {
-    margin-top: 20px;
-    border-radius: 1.5em;
-    padding: .5em 2em;
-    background-color: #8282e2;
-    cursor: pointer;
-}
-.content-image > img {
-    display: block;
-    width: 100%;
-} */
