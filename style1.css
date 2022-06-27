@@ -29,8 +29,8 @@ body {
     color: #fff;
 }
 .logo {
-    width: 200px;
-    height: 100%;
+    width: 100%;
+    height: 80px;
     margin-bottom: 10px;
 }
 header {
@@ -233,6 +233,9 @@ hr {
 .ctn-bawah {
     margin-top: 30px;
 }
+.content-detail span {
+    margin-bottom: 10px;
+}
 .content-kanan {
     display: flex;
     flex-direction: column;
@@ -298,6 +301,7 @@ hr {
     padding: 0;
 }
 .content-judul {
+    margin-top: 10px;
     display: inline-block;
     position: relative;
 }
@@ -317,7 +321,16 @@ hr {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
+span {
+    display: flex;
+    line-height: 1;
+    color: rgb(148, 148, 148);
+    font-size: 12px;
+    margin-top: 10px;
+}
+.fa-clock {
+    margin-right: 5px;
+}
 .kotak-coba {
     margin-top: 30px;
     width: 100%;
@@ -380,14 +393,53 @@ hr {
 .isi-futer {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+/* border: solid black; */
 }
 
 .futer .nama-page img {
-    width: 200px;
-    height: 70px;
+    width: 100%;
+    height: 80px;
 }
-.listing ul li {
+.listing ul li, .listing a {
+    /* margin-left: 100px; */
     color: #fff;
     list-style: none;
+}
+.isi-futer a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+}
+.isi-futer a:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #8282e2;
+    transform-origin: bottom right;
+    transition: transform .4s ease-out;
+}
+.isi-futer a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.listing li {
+    padding: 5px;
+}
+.listing li:nth-child(1) {
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 15px;
+    padding-top: 0;
+}
+.cp-right {
+    font-size: 12px;
+    color: #fff;
+    list-style: none;
+    line-height: 180px;
 }
