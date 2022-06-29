@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: rgb(240, 240, 240);
+    margin: 40px 100px;
+}
+article {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.utama {
+    width: 100vh;
+}
+.utama {
+    position: relative;
+    padding: 10px;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+}
+.utama img {
+    width: 40em;
+    height: 100%;
+}
+.utama h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+.utama p {
+    margin-bottom: 15px;
+    width: 40em;
+    text-align: justify;
+}
+aside  {
+    /* position: sticky;
+    top: 10px; */
+    border: solid black;
+    height: 20em;
+    padding: 10px;
+}
+aside .profile {
+    display: flex;
+    align-items: center;
+}
+aside .foto {
+    height: 50px;
+    width: 50px;
+    border: solid black;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+aside .penjelasan {
+    width: 15em;
+}
+aside p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: justify;
+}
