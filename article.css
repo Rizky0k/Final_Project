@@ -9,7 +9,7 @@ body {
     /* margin: 40px 100px; */
 }
 /* Navbar */
-.navbar li, a {
+#navbar li, a {
     /* display: none; */
     font-weight: 500;
     font-size: 16px;
@@ -19,40 +19,45 @@ body {
     border-radius: 20px;
     /* border: black solid; */
 }
-.navbar li:hover {
+#navbar li:hover {
     background-color: #8282e2;
     margin-right: 5px;
     margin-left: 5px;
     border-radius: 20px;
     transition: .2s;
 }
-.navbar a:hover {
+#navbar a:hover {
     color: #fff;
 }
-/* header {
+header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 20px;
     padding-top: 30px;
-    border: black solid;
-} */
-/* .navbar {
+    /* border: black solid; */
+}
+#navbar {
     display: flex;
     list-style: none;
     width: 60vh;
     padding-left: 10%;
-} */
+    opacity: 0;
+    transition: .2s;
+}
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 40px 150px;
+    margin: 40px 140px;
 }
 header button {
     cursor: pointer;
     border: none;
     height: 100%;
+}
+header button .fa-bars {
+    font-size: 2em;
 }
 .logo {
     width: 135px;
@@ -60,7 +65,7 @@ header button {
 }
 main {
     /* margin: 40px 20px; */
-    margin-top: 70px;
+    margin-top: 80px;
     /* margin-bottom: 40px; */
     /* border: solid black; */
     display: flex;
@@ -85,8 +90,16 @@ main {
 }
 .utama h1 {
     /* margin-top: 20px; */
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     font-size: 2.5rem;
+}
+span {
+    display: flex;
+    line-height: 1;
+    color: rgb(148, 148, 148);
+    font-size: 12px;
+    margin-bottom: 15px;
+    display: none;
 }
 .utama p {
     margin-bottom: 15px;
@@ -196,3 +209,66 @@ hr {
 }
 
 /* Futer */
+
+/* Responsive */
+/* Responsive tabelet */
+
+@media screen and (max-width: 1024px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    main h2 {
+        display: none;
+    }
+    hr {
+        width: 95%;
+    }
+    span {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 978px) {
+    #menu {
+        z-index: 100;
+    }
+    nav #navbar {
+        position: absolute;
+        right: 0;
+        top: 130px;
+        width: 50%;
+        height: 100%;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(65, 65, 65);
+        z-index: 1;        
+    }
+    #navbar {
+        overflow: hidden;
+        transition: .5s;
+    }
+    nav #navbar a {
+        color: #fff;
+    }
+
+
+}
+
+/* Responsive HP Landscape */
+@media screen and (max-width: 768px) {
+    nav {
+        margin: 40px 50px;
+    }
+    .isi-futer {
+        flex-direction: column;
+        align-items: flex-start;
+        /* margin-top: 20px; */
+    }
+}
+
+/* Responsive HP Portrait */
+@media screen and (max-width: 478px) {
+
+}
